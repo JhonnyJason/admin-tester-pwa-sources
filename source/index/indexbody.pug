@@ -1,3 +1,9 @@
 body
-    h1 Sample Index
-    p Sample Paragraph little Text for no use so it better be also no test, well it might say hello, Hello! :D                  1
+    h1 !{content.title}
+    p !{content.paragraph}
+    p !{sharedContent.copyrightClaim}
+    ul
+        each listEntry in listEntries
+            li
+                a(href=listEntry.ref) !{listEntry.text}
+    img#le-image(width="200" height="200" src="/img/le-image.jpg")
